@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#151923">
+  <meta name="description" content="30 инженерных LEGO-миссий для лагеря: модели, турниры и творчество.">
+  <title>LEGO Lab — инженерные миссии</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav><a class="nav-link" href="#missions">Программа</a></nav>
+  </header>
+
+  <main>
+    <section class="intro">
+      <video class="intro-video" autoplay muted loop playsinline poster="media/workshop.png"><source src="media/forest.mp4" type="video/mp4"></video>
+      <div class="intro-shade"></div>
+      <div class="intro-inner">
+        <div class="intro-copy"><p class="eyebrow">Октябрь · лагерь «Ломы»</p><h1>Собираем.<br>Проверяем.<br>Переделываем.</h1><p>Месяц инженерных историй, механизмов и командных испытаний. Здесь модель не обязана получиться с первого раза.</p></div>
+        <div class="film">
+        <div class="photo-strip" aria-label="Фотографии набора">
+          <button data-image="media/models.png" aria-label="Открыть модели"><img src="media/models.png" alt="Модели из конструктора"></button>
+          <button data-image="media/electronics.png" aria-label="Открыть электронику"><img src="media/electronics.png" alt="Электронные детали набора"></button>
+          <button data-image="media/workshop.png" aria-label="Открыть занятие"><img src="media/workshop.png" alt="Ребёнок собирает модель"></button>
+        </div>
+      </div>
+      </div>
+    </section>
+
+    <section class="route" aria-labelledby="route-title">
+      <div><p class="eyebrow">Быстрый старт</p><h2 id="route-title">Собрать маршрут смены</h2></div>
+      <div class="route-buttons" id="routeButtons"></div>
+      <p id="routeHint" class="hint">Показаны все 30 миссий. Выбери длину смены.</p>
+    </section>
+
+    <section class="missions" id="missions" aria-live="polite"></section>
+  </main>
+
+  <dialog id="missionDialog"><button class="close" aria-label="Закрыть">×</button><article id="missionDetail"></article></dialog>
+  <dialog id="photoDialog" class="photo-dialog"><button class="close photo-close" aria-label="Закрыть">×</button><img alt="Увеличенная фотография набора"></dialog>
+  <footer><b>LEGO LAB</b><span>Программа-конструктор для лагеря · работает без сервера</span></footer>
+  <script src="data/missions.js" defer></script>
+  <script src="app.js" defer></script>
+</body>
+</html>
